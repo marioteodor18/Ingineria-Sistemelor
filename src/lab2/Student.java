@@ -3,10 +3,10 @@ package lab2;
 import java.util.Objects;
 
 public class Student {
-    private String numarMatricol;
+    public String numarMatricol;
     private String prenume;
-    private String nume;
-    private String formatieDeStudiu;
+    public String nume;
+    public String formatieDeStudiu;
 
     public Student(String numarMatricol, String prenume, String nume, String formatieDeStudiu) {
         this.numarMatricol = numarMatricol;
