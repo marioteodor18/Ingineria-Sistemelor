@@ -21,7 +21,7 @@ public class AppLab4 {
         varste.forEach((nume, varsta) ->
                 System.out.println(nume + " -> " + varsta)
         );
-
+        //a
         varste.put("Vlad", 19);
         varste.put("Iulia", 19);
 
@@ -41,7 +41,7 @@ public class AppLab4 {
                 "Daniela", "Sibiu"
         );
 
-
+        //c
         HashMap<String, Tanar> tineri = new HashMap<>();
 
         for (String nume : varste.keySet()) {
@@ -56,7 +56,7 @@ public class AppLab4 {
             tineri.put(nume, tanar);
         }
 
-
+//d
         System.out.println("Tineri");
         tineri.forEach((nume, tanar) ->
                 System.out.println(nume + " -> " + tanar)

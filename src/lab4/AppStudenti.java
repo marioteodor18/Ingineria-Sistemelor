@@ -6,7 +6,7 @@ import java.io.File;
 import java.util.*;
 
 public class AppStudenti {
-
+//exercitii laborator
     public static void main(String[] args) throws Exception {
         List<Student> listaStudenti = new ArrayList<>();
         Scanner sc = new Scanner(new File("studenti_in.txt"));
@@ -26,7 +26,7 @@ public class AppStudenti {
             listaStudenti.add(s);
         }
         sc.close();
-
+//tema de casa
         HashMap<String, Student> mapStudenti = new HashMap<>();
 
         for (Student s : listaStudenti) {
@@ -35,8 +35,7 @@ public class AppStudenti {
 
 
         Scanner scNote = new Scanner(new File("note_anon.txt"));
-
-        while (scNote.hasNextLine()) {
+            while (scNote.hasNextLine()) {
             String linie = scNote.nextLine();
             String[] parts = linie.split(",");
 
@@ -51,28 +50,28 @@ public class AppStudenti {
         }
         scNote.close();
 
+        // tema
+        HashMap<String, Student> tineri = new HashMap<>();
+        for (Student s : mapStudenti.values()) {
+            String key = s.getPrenume() + "-" + s.getNume();
+            tineri.put(key, s);
+        }
 
-        System.out.println(" Studenti cu note ");
-        mapStudenti.forEach((k, v) -> System.out.println(v));
+        //  tema
+        float notaB = gasesteNota("Bianca", "Popescu", tineri);
+        float notaI = gasesteNota("Ioan", "Popa", tineri);
 
-
-        float notaM = gasesteNota("Bianca", "Popescu", mapStudenti);
-        float notaN = gasesteNota("Ioan", "Popa", mapStudenti);
-
-        System.out.println("Nota Bianca: " + notaM);
-        System.out.println("Nota Ioan: " + notaN);
+        System.out.println("Nota Bianca Popescu: " + notaB);
+        System.out.println("Nota Ioan Popa: " + notaI);
     }
 
-
-    public static float gasesteNota(String prenume, String nume,
-                                    Map<String, Student> studenti) {
-
-        for (Student s : studenti.values()) {
-            if (s.getPrenume().equals(prenume) && s.getNume().equals(nume)) {
-                return (float) s.getNota();
-            }
+    // tema metoda
+    public static float gasesteNota(String prenume, String nume, Map<String, Student> studenti) {
+        String key = prenume + "-" + nume;
+        if (studenti.containsKey(key)) {
+            return (float) studenti.get(key).getNota();
         }
         return 0.0f;
     }
-
 }
+
