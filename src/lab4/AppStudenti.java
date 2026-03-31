@@ -11,6 +11,7 @@ public class AppStudenti {
         List<Student> listaStudenti = new ArrayList<>();
         Scanner sc = new Scanner(new File("studenti_in.txt"));
 
+
         while (sc.hasNextLine()) {
             String linie = sc.nextLine();
             String[] parts = linie.split(",");
