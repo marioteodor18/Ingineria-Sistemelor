@@ -1,5 +1,5 @@
 package lab4;
-
+//b
 public class Tanar {
     private String name;
     private int age;
