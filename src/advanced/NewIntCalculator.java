@@ -1,6 +1,14 @@
 package advanced;
 
 public class NewIntCalculator extends ACalculator {
+    public Object getState() {
+        return state;
+    }
+
+    public NewIntCalculator divide(int value) {
+        this.state = (Integer) this.state / value;
+        return this;
+    }
 
     @Override
     public void init(Object state) {

@@ -10,7 +10,9 @@ public abstract class ACalculator {
     }
     public abstract  void init(Object state);
 
-
+    public Object getState() {
+        return state;
+    }
 
 
 
