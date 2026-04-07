@@ -8,7 +8,6 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class Main {
-
     // 2.5.2
     public static boolean existaInLista(List<Student> lista, Student cautat) {
         for (Student s : lista) {
@@ -27,6 +26,22 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        //lab5
+        List<StudentBursier> bursieri = new ArrayList<>();
+
+        bursieri.add(new StudentBursier("1025", "Andrei",   "Popa",     "ISM141/2",  8.70, 725.50));
+        bursieri.add(new StudentBursier("1024", "Ioan",     "Mihalcea", "ISM141/1",  9.80, 801.10));
+        bursieri.add(new StudentBursier("1026", "Anamaria", "Prodan",   "TI131/1",   8.90, 745.50));
+        bursieri.add(new StudentBursier("1029", "Bianca",   "Popescu",  "TI131/1",   9.10, 780.80));
+
+        System.out.println("Lista bursieri");
+        for (StudentBursier sb : bursieri) {
+            System.out.println(sb);
+        }
+
+        FileUtils.saveToFile("bursieri_out.txt", bursieri);
+        System.out.println("\nFinal Lab5");
+
         //lab1
         Student student1 = new Student("594", "Mario", "Roman", "ISM 21/1");
         //lab2

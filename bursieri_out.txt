@@ -1,0 +1,4 @@
+Andrei Popa ISM141/2 1025 nota=8.7 cuantumBursa=725.5
+Ioan Mihalcea ISM141/1 1024 nota=9.8 cuantumBursa=801.1
+Anamaria Prodan TI131/1 1026 nota=8.9 cuantumBursa=745.5
+Bianca Popescu TI131/1 1029 nota=9.1 cuantumBursa=780.8
