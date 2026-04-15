@@ -31,7 +31,7 @@ public class AplicatieCuBursa {
         lista.add(new StudentBursier(1029, "Bianca",   "Popescu", "TI131/1,",  9.10, 100.00));
         return lista;
     }
-
+//return
     /**
      * 1.Formatie de studiu
      * 2. Nume
