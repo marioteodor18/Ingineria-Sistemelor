@@ -24,14 +24,16 @@ public class AplicatieCuBursa {
 
     public List<StudentBursier> genereaza() {
         List<StudentBursier> lista = new ArrayList<>();
-        lista.add(new StudentBursier(1025, "Andrei",   "Popa",    "ISM141/2",  8.70, 725.50));
-        lista.add(new StudentBursier(1024, "Ioan",     "Mihalcea","ISM141/1",  9.80, 801.10));
-        lista.add(new StudentBursier(1029, "Bianca",   "Popescu", "TI131/1,",  9.10, 780.80));
-        lista.add(new StudentBursier(1026, "Anamaria", "Prodan",  "TI131/1",   8.90, 745.50));
-        lista.add(new StudentBursier(1029, "Bianca",   "Popescu", "TI131/1,",  9.10, 100.00));
-        return lista;
-    }
+        lista.add(new StudentBursier("1025", "Andrei",   "Popa",    "ISM141/2",  8.70, 725.50));
+        lista.add(new StudentBursier("1024", "Ioan",     "Mihalcea","ISM141/1",  9.80, 801.10));
+        lista.add(new StudentBursier("1029", "Bianca",   "Popescu", "TI131/1,",  9.10, 780.80));
+        lista.add(new StudentBursier("1026", "Anamaria", "Prodan",  "TI131/1",   8.90, 745.50));
+        lista.add(new StudentBursier("1029", "Bianca",   "Popescu", "TI131/1,",  9.10, 100.00));
 
+        return lista;
+
+    }
+//return
     /**
      * 1.Formatie de studiu
      * 2. Nume
