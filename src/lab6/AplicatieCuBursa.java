@@ -14,7 +14,7 @@ public class AplicatieCuBursa {
             System.out.println(student);
         }
 
-        System.out.println("--------------------------------------------------");
+        System.out.println("-----------");
 
         List<StudentBursier> sortata = instanta.sorteaza(lista);
         for (StudentBursier student : sortata) {
@@ -36,10 +36,10 @@ public class AplicatieCuBursa {
 //return
     /**
      * 1.Formatie de studiu
-     * 2. Nume
-     * 3. Prenume
-     * 4. Nota
-     * 5. Cuantum bursa
+     * 2.Nume
+     * 3.Prenume
+     * 4.Nota
+     * 5.Cuantum bursa
      **/
     public List<StudentBursier> sorteaza(List<StudentBursier> lst) {
         List<StudentBursier> copie = new ArrayList<>(lst);
