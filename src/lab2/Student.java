@@ -2,14 +2,14 @@ package lab2;
 
 import java.util.Objects;
 
-public class Student {
+public final class  Student {
     public String numarMatricol;
     public String prenume;
     public String nume;
     public String formatieDeStudiu;
     private double nota;
 
-    public Student(String numarMatricol, String prenume, String nume, String formatieDeStudiu) {
+    public  Student(String numarMatricol, String prenume, String nume, String formatieDeStudiu) {
         this.numarMatricol = numarMatricol;
         this.prenume = prenume;
         this.nume = nume;
