@@ -2,7 +2,7 @@ package lab2;
 
 import java.util.Objects;
 
-public final class  Student {
+public class  Student {
     public String numarMatricol;
     public String prenume;
     public String nume;

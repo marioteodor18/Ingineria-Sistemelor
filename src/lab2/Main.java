@@ -6,9 +6,12 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 import java.util.TreeSet;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.*;
+import java.io.*;
 
 public class Main {
-    // 2.5.2
+
     public static boolean existaInLista(List<Student> lista, Student cautat) {
         for (Student s : lista) {
             if (s.getPrenume().equals(cautat.getPrenume()) &&
@@ -20,15 +23,13 @@ public class Main {
         return false;
     }
 
-    // 2.5.3 tema casa
     public static boolean existaInSet(HashSet<Student> set, Student cautat) {
         return set.contains(cautat);
     }
 
-    public static void main(String[] args) {
-        //lab5
+    public static void main(String[] args) throws Exception {
+        // lab5
         List<StudentBursier> bursieri = new ArrayList<>();
-
         bursieri.add(new StudentBursier("1025", "Andrei",   "Popa",     "ISM141/2",  8.70, 725.50));
         bursieri.add(new StudentBursier("1024", "Ioan",     "Mihalcea", "ISM141/1",  9.80, 801.10));
         bursieri.add(new StudentBursier("1026", "Anamaria", "Prodan",   "TI131/1",   8.90, 745.50));
@@ -42,15 +43,13 @@ public class Main {
         FileUtils.saveToFile("bursieri_out.txt", bursieri);
         System.out.println("\nFinal Lab5");
 
-        //lab1
-        Student student1 = new Student("594", "Mario", "Roman", "ISM 21/1");
-        //lab2
-        Student student2 = new Student("120", "Alis",  "Popa", "TI21/2");
-        Student student3 = new Student("112", "Maria", "Popa", "TI21/1");
+        //  lab2
+        Student student1 = new Student("594", "Mario",     "Roman",      "ISM 21/1");
+        Student student2 = new Student("120", "Alis",      "Popa",       "TI21/2");
+        Student student3 = new Student("112", "Maria",     "Popa",       "TI21/1");
         Student student4 = new Student("584", "Alexandru", "Dumitrescu", "ISM21/1");
         Student student5 = new Student("590", "Spanu",     "Mihai",      "ISM21/2");
 
-        //2.5.2 a)
         List<Student> listaStudenti = new ArrayList<>();
         listaStudenti.add(student1);
         listaStudenti.add(student2);
@@ -62,20 +61,16 @@ public class Main {
             System.out.println(s);
         }
 
-        //2.5.2 b)
         Student cautat1 = new Student("120", "Alis", "Popa", "TI21/2");
         System.out.println("Alis Popa este in lista: " + existaInLista(listaStudenti, cautat1));
 
-        //2.5.2 c)
         Student cautat2 = new Student("112", "Maria", "Popa", "TI21/1");
         System.out.println("Maria Popa este in lista: " + existaInLista(listaStudenti, cautat2));
 
-        //2.5.3 tema casa
         HashSet<Student> setStudenti = new HashSet<>(listaStudenti);
         System.out.println("Alis Popa este in set: " + existaInSet(setStudenti, cautat1));
         System.out.println("Maria Popa este in set: " + existaInSet(setStudenti, cautat2));
 
-        //lab2 exercitii
         List<Integer> x = new ArrayList<>();
         List<Integer> y = new ArrayList<>();
         List<Integer> xPlusY = new ArrayList<>();
@@ -92,22 +87,18 @@ public class Main {
 
         Collections.sort(x);
         Collections.sort(y);
-        System.out.println("Exercitii de la laborator ");
         System.out.println("lista x" + x);
         System.out.println("lista y" + y);
 
-        //a xplusy
         xPlusY.addAll(x);
         xPlusY.addAll(y);
         Collections.sort(xPlusY);
         System.out.println("a) xPlusY: " + xPlusY);
 
-        //c xMinusY
         xMinusY.addAll(x);
         xMinusY.removeAll(y);
         System.out.println("c) xMinusY " + xMinusY);
 
-        //d xPlusYLimitedByP
         Set<Integer> tempSet = new TreeSet<>();
         for (int val : x) {
             if (val <= p) tempSet.add(val);
@@ -117,5 +108,6 @@ public class Main {
         }
         xPlusYLimitedByP.addAll(tempSet);
         System.out.println("d) xPlusYLimitedByP: " + xPlusYLimitedByP);
+
     }
 }
