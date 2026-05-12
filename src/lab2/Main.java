@@ -1,11 +1,6 @@
 package lab2;
-import java.util.HashSet;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
+
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.*;
 import java.io.*;
@@ -14,9 +9,7 @@ public class Main {
 
     public static boolean existaInLista(List<Student> lista, Student cautat) {
         for (Student s : lista) {
-            if (s.getPrenume().equals(cautat.getPrenume()) &&
-                    s.getNume().equals(cautat.getNume()) &&
-                    s.getFormatieDeStudiu().equals(cautat.getFormatieDeStudiu())) {
+            if (s.getPrenume().equals(cautat.getPrenume()) && s.getNume().equals(cautat.getNume()) && s.getFormatieDeStudiu().equals(cautat.getFormatieDeStudiu())) {
                 return true;
             }
         }
@@ -28,7 +21,10 @@ public class Main {
     }
 
     public static void main(String[] args) throws Exception {
+
+
         // lab5
+
         List<StudentBursier> bursieri = new ArrayList<>();
         bursieri.add(new StudentBursier("1025", "Andrei",   "Popa",     "ISM141/2",  8.70, 725.50));
         bursieri.add(new StudentBursier("1024", "Ioan",     "Mihalcea", "ISM141/1",  9.80, 801.10));
