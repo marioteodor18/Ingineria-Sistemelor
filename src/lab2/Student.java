@@ -23,6 +23,9 @@ public class  Student {
         this.nota = nota;
     }
 
+    public Student(int id, String pren, String nume, String grupa, double nota) {
+    }
+
     public String getPrenume() { return prenume; }
     public String getNume() { return nume; }
     public String getFormatieDeStudiu() { return formatieDeStudiu; }
@@ -54,4 +57,6 @@ public class  Student {
     public int hashCode() {
         return Objects.hash(numarMatricol);
     }
+
+
 }

@@ -31,8 +31,7 @@ public class ex3 {
         studentiCuNote.stream().filter(student -> student.getNota() < 5).forEach(System.out::println);
 
         //c)mapping nota 4 devine 4
-        List<Student> corectati = studentiCuNote.stream()
-                .map(student -> {
+        List<Student> corectati = studentiCuNote.stream().map(student -> {
                     if (student.getNota() < 4) student.setNota(4.0);
                     return student;
                 }).collect(Collectors.toList());
