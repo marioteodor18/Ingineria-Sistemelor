@@ -13,7 +13,8 @@ public class TimeExecutionDecorator extends TimeExecution {
     public long executionTime(List<Student> studenti) {
         long startTime = System.currentTimeMillis();
         exporter.doExport(studenti);
-        long endTime = System.currentTimeMillis();    // timpul DUPA export
+        long endTime = System.currentTimeMillis();
+        System.out.println();
         System.out.println("Timpul dupa export: " + (endTime - startTime));
         long duration = endTime - startTime;
         System.out.println("Timp executie: " + duration + " ms pentru " + exporter);
