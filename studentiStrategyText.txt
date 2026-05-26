@@ -1,0 +1,4 @@
+numarMatricol,prenume,nume,formatieDeStudiu,nota
+1025
+1024
+1026
