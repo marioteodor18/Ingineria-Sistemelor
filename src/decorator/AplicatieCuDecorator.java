@@ -16,20 +16,16 @@ public class AplicatieCuDecorator {
                 new Student("1024", "Ioan", "Mihalcea", "ISM141/1", 10),
                 new Student("1026", "Anamaria", "Prodan", "TI131/1", 8.90)
         );
+        List<IStudentiExport> listaExporteri = Arrays.asList(
+                new StudentiInConsola(),
+                new StudentiInFisierText("studentiStrategyText.txt"),
+                new StudentiInFisierXlsx("studentiStrategyExcel.xlsx")
+        );
 
-        List<IStudentiExport> strategies = Arrays.asList(
-                new StudentiInConsola() {
-                    public void exportStudenti(List<Student> studenti) {
-                    }
-                }, new StudentiInFisierText("studentiStrategyText.txt") {
-                    public void exportStudenti(List<Student> studenti) {
-                    }
-                }, new StudentiInFisierXlsx("studentiStrategyExcel.xlsx"));
-
-        for (IStudentiExport strategy : strategies) {
-            TimeExecutionDecorator decorator = new TimeExecutionDecorator(strategy, studenti);
-            long time = decorator.executionTime(studenti);
-            System.out.println("Execution time: " + time + " for " + strategy);
+        for (IStudentiExport exporterCurent: listaExporteri) {
+            TimeExecutionDecorator decorator = new TimeExecutionDecorator(exporterCurent, studenti);
+            long timp = decorator.executionTime(studenti);
+            System.out.println("Execution time: " + timp + " for " + exporterCurent);
         }
     }
 }

@@ -16,13 +16,5 @@ public class ObserverPatternDemo {
 
 
 
-        String message1 = "Observer Pattern in Java";
-        channel.uploadVideo(message1);
-        media1.update(message1);
-        media2.update(message1);
-
-        String message2 = "Singleton Pattern in Java";
-        channel.uploadVideo(message2);
-        media1.update(message2);
     }
 }

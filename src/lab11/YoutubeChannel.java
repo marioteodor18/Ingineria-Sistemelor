@@ -7,16 +7,20 @@ public class YouTubeChannel implements Subject {
     private List<Observer> observers = new ArrayList<>();
 
     public YouTubeChannel(String channelName) {
+
         this.channelName = channelName;
     }
 
 
-    public void addObserver(Observer observer) {
+    public void addObserver(Observer observer)
+    {
+
         observers.add(observer);
     }
 
 
     public void removeObserver(Observer observer) {
+
         observers.remove(observer);
     }
 

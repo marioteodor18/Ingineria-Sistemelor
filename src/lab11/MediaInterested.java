@@ -5,10 +5,12 @@ public class MediaInterested implements Observer {
 
 //11.3.1
     public MediaInterested(String name) {
+
         this.name = name;
     }
 
     public void update(String message) {
+
         System.out.println("["+name + "] received update: " + message);
     }
 }
